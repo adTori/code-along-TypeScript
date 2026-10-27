@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { ProductCard } from "./components/productCard";
+import { ProductModel } from "./models/productModel";
+
+
 
 function App() {
 
-	const [products, setProducts] = useState([
+	const [products, setProducts] = useState<ProductModel[]>([
 		{ id: 1, name: "Dator", price: 8000, sold: true },
 		{ id: 2, name: "Mus", price: 300, sold: true },
 		{ id: 3, name: "Tangentbord", price: 500, sold: false }
@@ -11,12 +14,12 @@ function App() {
 
 
 
-	const name = "Molly";
-	const age = 25;
+	const name:string = "Molly";
+	const age:number = 25;
 
 	
 
-	const toggleAvailability = (productName) => {
+	const toggleAvailability = (productName:string) => {
 		setProducts(
 			products.map((product) =>
 				product.name === productName

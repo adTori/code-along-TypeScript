@@ -1,9 +1,8 @@
 
+import { ProductCardProps } from "../models/productModel";
 
 
-
-
-export const ProductCard = ({ product, toggleAvailability }) => {
+export const ProductCard = ({ product, toggleAvailability }:ProductCardProps) => {
 	return (
 		<li>
 			<h3>{product.name}</h3>
@@ -25,6 +24,3 @@ export const ProductCard = ({ product, toggleAvailability }) => {
 
 
 
-// Vi använder void eftersom toggleAvailability
-// bara ändrar produktens lagerstatus
-// och inte behöver returnera något direkt värde.
